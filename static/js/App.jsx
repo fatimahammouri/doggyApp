@@ -23,11 +23,19 @@ function Homepage() {
             .then((breedData) => setBreedData(breedData.message))
     }, []);
 
+    // push all keys(breeds names) from breedData object to breeds array
+    let breeds = []
+    for (const breed of Object.keys(breedData)){
+       breeds.push(breed) 
+    }
+    // console.log(breeds)
 
     return (
         <React.Fragment>
             <h1> Hi, Doggy!</h1>
-            
+            <div>
+                {breeds.map(breed => <a>{breed}</a>)}
+            </div>
         </React.Fragment>
     )
 }
