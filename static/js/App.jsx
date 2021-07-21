@@ -11,9 +11,23 @@ const useHistory = ReactRouterDOM.useHistory;
 function Homepage() {
     /* Homepage component shows homepge and breeds list */
 
+    // useEffect to send a fetch request to the dog API Endpoint
+    // on successful response from API, turn JSON response to
+    // js object then update the breed state with value of the key "message"
+
+    // use useState Hook to save state of the breeds data 
+    const [breedData, setBreedData] = React.useState([]);
+    React.useEffect(() => {
+        fetch("https://dog.ceo/api/breeds/list/all")
+            .then((response) => response.json())
+            .then((breedData) => setBreedData(breedData.message))
+    }, []);
+
+
     return (
         <React.Fragment>
             <h1> Hi, Doggy!</h1>
+            
         </React.Fragment>
     )
 }
@@ -37,7 +51,9 @@ function App() {
                     <Route exact path="/">
                         <Homepage />
                     </Route>
-
+                    {/* <Route path="/details/:id">
+                        <Images />
+                    </Route> */}
                 </Switch>
 
             </Router>
@@ -45,3 +61,8 @@ function App() {
         </React.Fragment>
     )
 }
+
+
+
+// render the App component on div with id=root
+ReactDOM.render(<App />, document.getElementById("root"))
