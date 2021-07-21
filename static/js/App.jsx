@@ -7,6 +7,21 @@ const Link = ReactRouterDOM.Link;
 const Switch = ReactRouterDOM.Switch;
 const useHistory = ReactRouterDOM.useHistory;
 
+
+function Homepage() {
+    /* Homepage component shows homepge and breeds list */
+
+    return (
+        <React.Fragment>
+            <h1> Hi, Doggy!</h1>
+        </React.Fragment>
+    )
+}
+
+
+
+
+
 function App() {
     /* App component control Navigation among the App */
 
