@@ -33,14 +33,42 @@ function Homepage() {
     return (
         <React.Fragment>
             <h1> Hi, Doggy!</h1>
-            <div>
-                {breeds.map(breed => <a>{breed}</a>)}
-            </div>
+            
+            {breeds.map(breed =>
+                 <Link key={breed} to={`/details/${breed}`}>{breed}</Link>)}
+            
         </React.Fragment>
     )
 }
 
 
+function Images() {
+    /* Images component renders on a seperate page */
+
+    // useEffect to send a fetch request to the dog API images Endpoint
+    // on successful response from API, convert JSON response to
+    // js object then update the images state with value of the key "message"
+
+    // use useState Hook to save state of the images data
+    const [images, setImages] = React.useState([])
+
+    // useParams saves the parameter from url (specific breed) so we can 
+    //  use it in fetching images for that specific breed
+    const params = ReactRouterDOM.useParams();
+    // console.log(params)
+
+    React.useEffect(() => {
+        fetch(`https://dog.ceo/api/breed/${params.id}/images`)
+            .then(response => response.json())
+            .then((imagesData) => setImages(imagesData.message))
+    }, [])
+
+    return (
+        <React.Fragment>
+            {images.map(image => <img src={image}></img>)}
+        </React.Fragment>
+    )
+}
 
 
 
@@ -49,7 +77,7 @@ function App() {
 
     return (
         <React.Fragment>
-            <Homepage />
+            
             <Router>
 
                 <Link to="/">Home</Link>
@@ -59,9 +87,9 @@ function App() {
                     <Route exact path="/">
                         <Homepage />
                     </Route>
-                    {/* <Route path="/details/:id">
+                    <Route path="/details/:id">
                         <Images />
-                    </Route> */}
+                    </Route>
                 </Switch>
 
             </Router>
