@@ -18,7 +18,7 @@ function Homepage() {
     // use useState Hook to save state of the breeds data 
     const [breedData, setBreedData] = React.useState([]);
     const [searchInput, setSearchInput] = React.useState("")
-   
+    const [filteredValue, setFilteredValue] = React.useState("")
 
     React.useEffect(() => {
         fetch("https://dog.ceo/api/breeds/list/all")
@@ -33,6 +33,12 @@ function Homepage() {
     }
     // console.log(breeds)
 
+    const filtered = breeds.filter(breed => {
+        // console.log( breed.includes(searchInput))
+        return breed.toLowerCase().includes(searchInput.toLowerCase())
+        })
+        // console.log(filtered) 
+        // console.log(typeof(filtered[0]))
 
     return (
         <React.Fragment>
