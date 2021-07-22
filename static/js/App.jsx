@@ -17,6 +17,9 @@ function Homepage() {
 
     // use useState Hook to save state of the breeds data 
     const [breedData, setBreedData] = React.useState([]);
+    const [searchInput, setSearchInput] = React.useState("")
+   
+
     React.useEffect(() => {
         fetch("https://dog.ceo/api/breeds/list/all")
             .then((response) => response.json())
@@ -30,14 +33,19 @@ function Homepage() {
     }
     // console.log(breeds)
 
+
     return (
         <React.Fragment>
             <h1> Hi, Doggy!</h1>
             
-            <Search />
-            
+            <label>Search for a Breed:</label>
+            <input type="search" 
+                onChange={(event)=>setSearchInput(event.target.value)}/>
+
+             <button>Search</button>
+
             {breeds.map(breed =>
-                 <Link key={breed} to={`/details/${breed}`}>{breed}</Link>)}
+                 <Link key={breed} to={`/details/${breed}`}>{breed.toUpperCase()}</Link>)}
             
         </React.Fragment>
     )
@@ -73,19 +81,27 @@ function Images() {
 }
 
 
-function Search(){
-    /* Search component to search breed list */
+// function Search(props){
+//     /* Search component to search breed list */
     
-    return(
-        <React.Fragment>
-            <label>Search for a Breed:</label>
-            
-            <input type="search"/>
+//     const [searchInput, setSearchInput] = React.useState([])
+//     const {breeds} = props;
 
-            <button>Search</button>
-        </React.Fragment>
-    )
-}
+//     function findBreed(){
+//         const filtered = breeds.filter(breed => {
+//             // console.log( breed.includes(searchInput))
+//             return breed.includes(searchInput)
+//         })
+//         console.log(filtered)
+//          
+//     }
+
+//     return(
+//         <React.Fragment>
+//             
+//         </React.Fragment>
+//     )
+// }
 
 function App() {
     /* App component control Navigation among the App */
