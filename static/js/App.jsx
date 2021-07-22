@@ -34,6 +34,8 @@ function Homepage() {
         <React.Fragment>
             <h1> Hi, Doggy!</h1>
             
+            <Search />
+            
             {breeds.map(breed =>
                  <Link key={breed} to={`/details/${breed}`}>{breed}</Link>)}
             
@@ -71,6 +73,19 @@ function Images() {
 }
 
 
+function Search(){
+    /* Search component to search breed list */
+    
+    return(
+        <React.Fragment>
+            <label>Search for a Breed:</label>
+            
+            <input type="search"/>
+
+            <button>Search</button>
+        </React.Fragment>
+    )
+}
 
 function App() {
     /* App component control Navigation among the App */
