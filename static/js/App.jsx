@@ -48,7 +48,9 @@ function Homepage() {
             <input type="search" 
                 onChange={(event)=>setSearchInput(event.target.value)}/>
 
-             <button>Search</button>
+            <button onClick={() => {
+               setFilteredValue(filtered[0])
+               alert("NO")}}> Search </button>
 
             {breeds.map(breed =>
                  <Link key={breed} to={`/details/${breed}`}>{breed.toUpperCase()}</Link>)}
