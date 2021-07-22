@@ -52,6 +52,8 @@ function Homepage() {
                setFilteredValue(filtered[0])
                alert("NO")}}> Search </button>
 
+            <FilteredBreed value={filteredValue}/> 
+
             {breeds.map(breed =>
                  <Link key={breed} to={`/details/${breed}`}>{breed.toUpperCase()}</Link>)}
             
@@ -59,6 +61,16 @@ function Homepage() {
     )
 }
 
+
+function FilteredBreed(props){
+    let {value} = props;
+    
+    return (
+        <div>
+           <Link key={value} to={`/details/${value}`}>{value}</Link> 
+        </div>
+    )
+}
 
 function Images() {
     /* Images component renders on a seperate page */
