@@ -43,7 +43,7 @@ function Homepage() {
 
             <button onClick={() => {
                setFilteredValue(filtered[0])
-               if(!filteredValue){alert("NO")}
+               if(!filteredValue){alert("NO breed was found")}
                }}> Search </button>
 
             <FilteredBreed value={filteredValue}/> 
