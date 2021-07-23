@@ -1,9 +1,9 @@
 function Homepage() {
     /* Homepage component shows homepge and breeds list */
 
-    // useEffect to send a fetch request to the dog API Endpoint
-    // on successful response from API, turn JSON response to
-    // js object then update the breed state with value of the key "message"
+    /* useEffect to send a fetch request to the dog API Endpoint
+        on successful response from API, turn JSON response to javascript
+        object then update the breed state with value of the key "message" */
 
     // use useState Hook to save state of the breeds data 
     const [breedData, setBreedData] = React.useState([]);
@@ -23,8 +23,11 @@ function Homepage() {
     }
     // console.log(breeds)
 
+
+    /* filter breeds array and save returned match with value of 
+        searchInput: (value of user input into the input element)
+    */
     const filtered = breeds.filter(breed => {
-        // console.log( breed.includes(searchInput))
         return breed.toLowerCase().includes(searchInput.toLowerCase())
         })
         // console.log(filtered) 
@@ -53,6 +56,8 @@ function Homepage() {
 
 
 function FilteredBreed(props){
+    /* FilteredBreed component renders the breed thet matches user input*/
+    
     let {value} = props;
     
     return (
