@@ -32,7 +32,7 @@ function Homepage() {
         })
         // console.log(filtered) 
         // console.log(typeof(filtered[0]))
-
+        
     return (
         <React.Fragment>
             <h1> Hi, Doggy!</h1>
@@ -43,13 +43,15 @@ function Homepage() {
 
             <button onClick={() => {
                setFilteredValue(filtered[0])
-               alert("Breed was not found, Please try again")}}> Search </button>
+               if(!filteredValue){alert("NO")}
+               }}> Search </button>
 
             <FilteredBreed value={filteredValue}/> 
 
             {breeds.map(breed =>
-                 <Link key={breed} to={`/details/${breed}`}>{breed.toUpperCase()}</Link>)}
-            
+                <div>
+                    <Link key={breed} to={`/details/${breed}`}>{breed.toUpperCase()}</Link>
+                </div>)}
         </React.Fragment>
     )
 }
@@ -57,12 +59,22 @@ function Homepage() {
 
 function FilteredBreed(props){
     /* FilteredBreed component renders the breed thet matches user input*/
-    
+
     let {value} = props;
+    console.log(value)
+    // if(value === undefined){alert("Breed was not found, Please try again")}
     
-    return (
-        <div>
-           <Link key={value} to={`/details/${value}`}>{value}</Link> 
-        </div>
-    )
+        return (
+            <div>
+               <Link key={value} to={`/details/${value}`}>{value}</Link> 
+            </div>
+        )
+    
+    // else{
+    //     return(
+    //     <div>
+    //         <p>item not here</p>
+    //     </div>)
+    // }
+    
 }
