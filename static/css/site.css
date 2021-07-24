@@ -16,10 +16,12 @@ a{
     text-decoration: none;   
 }
 img{
-    width: 95%;
-    height: 95%;
+    width: 30vw;
+    height: 30vh;
 }
 .images_grid{
     display: grid;
     grid-template-columns: auto auto;
+    gap: 5em;
+    padding: 1em;
 }
