@@ -18,10 +18,14 @@ function Images() {
             .then(response => response.json())
             .then((imagesData) => setImages(imagesData.message))
     }, [])
-
+    let showImages = images.slice(0,4)
     return (
-        <React.Fragment>
-            {images.map(image => <img src={image}></img>)}
-        </React.Fragment>
+        <div>
+            <h1> {params.id} </h1>
+        
+            <div className="images_grid">
+                {showImages.map(image => <img src={image}></img>)}
+            </div>
+        </div>
     )
 }

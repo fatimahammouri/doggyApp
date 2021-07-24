@@ -35,9 +35,12 @@ function Homepage() {
         
     return (
         <React.Fragment>
-            <h1> Hi, Doggy!</h1>
+            <div>
+            <h1 className="header"> Welcome to Doggy!</h1>
+            <h2>Choose or search for a breed to see Images</h2>
             
-            <label>Search for a Breed:</label>
+            
+            <label>Search Breeds:</label>
             <input type="search" 
                 onChange={(event)=>setSearchInput(event.target.value)}/>
 
@@ -50,8 +53,9 @@ function Homepage() {
 
             {breeds.map(breed =>
                 <div>
-                    <Link key={breed} to={`/details/${breed}`}>{breed.toUpperCase()}</Link>
+                    <Link key={breed} to={`/details/${breed}`}>{breed}</Link>
                 </div>)}
+                </div>
         </React.Fragment>
     )
 }
