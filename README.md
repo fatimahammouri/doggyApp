@@ -38,6 +38,12 @@ Opens a separate page showing random pictures of dogs from that breed.
 
 
 ---
+## Installation and Usage
+
+
+
+
+---
 
 ## Future State
 Nice to have features for Doggy:
