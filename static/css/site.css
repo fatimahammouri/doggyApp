@@ -1,0 +1,25 @@
+/* let's add some Styling */
+
+body{
+    background-color:rgb(249, 249, 249);
+}
+h1, h2{
+    text-transform:capitalize;
+    color: rgb(87, 57, 31);  
+}
+div{
+    margin-top: 1em;
+}
+a{
+    text-decoration: none;
+    color:rgb(179, 83, 15);
+    text-decoration: none;   
+}
+img{
+    width: 95%;
+    height: 95%;
+}
+.images_grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
