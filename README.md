@@ -1,6 +1,6 @@
-# Doggy App
+# DOGGY App
 
-Doggy app is a single page application that was built using React to show random dog pictures to users using the [Dog API](https://dog.ceo/dog-api/).
+DOGGY app is a single page application that was built using React to show random dog pictures to users from the [Dog API](https://dog.ceo/dog-api/).
 
 
 
@@ -25,28 +25,40 @@ Opens a separate page showing random pictures of dogs from that breed.
 ## Technologies
 
 * React
-
-* HTML
-
-* CSS
-
 * React Router
-
-* React Bootstrap
-
+* HTML
+* CSS
 * Dog API
 
 
 ---
 ## Installation and Usage
 
+Clone or fork this repo:
 
+open the project in your favourite Text editor like [VS Code](https://code.visualstudio.com/)
 
+DOGGY is styled using Mainly CSS, CDNs are included in root.html
+
+Create and activate a virtual environment inside your directory:
+```
+$ virtualenv env
+$ source env/bin/activate
+```
+Install flask framework:
+```
+$ pip3 install flask
+```
+Run the app:
+```
+$ python3 server.py
+```
+Navigate to http://localhost:5000 to access DOGGY in your browser.
 
 ---
 
 ## Future State
-Nice to have features for Doggy:
+Nice to have features for DOGGY:
 
 * Add feature to allow users to download images to their devices
 * Incorporate a second API to show details and information about each Breed
