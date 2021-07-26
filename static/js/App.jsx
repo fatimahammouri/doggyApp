@@ -1,16 +1,15 @@
 "use strict";
 
-// import the BrowserRouter Components
+// import BrowserRouter Components
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
 const Switch = ReactRouterDOM.Switch;
-const useHistory = ReactRouterDOM.useHistory;
 
 
 
 function App() {
-    /* App component control Navigation among the App */
+    /* App component controls Navigation among the App view */
 
     return (
         <React.Fragment>
@@ -27,6 +26,7 @@ function App() {
                     <Route path="/details/:id">
                         <Images />
                     </Route>
+                    
                 </Switch>
 
             </Router>
