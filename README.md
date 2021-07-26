@@ -14,7 +14,7 @@ Allow users to click into each breed to see images.
 
 ### Search
 
-Allow users to filter the list of breeds with simple substring API matching.
+Allow users to filter the list of breeds with simple substring matching.
 
 ### Images 
 
@@ -25,15 +25,9 @@ Opens a separate page showing random pictures of dogs from that breed.
 ## Technologies
 
 * React
-
+* React Router 
 * HTML
-
 * CSS
-
-* React Router
-
-* React Bootstrap
-
 * Dog API
 
 
