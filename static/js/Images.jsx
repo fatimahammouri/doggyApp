@@ -24,7 +24,7 @@ function Images() {
             <h1> {params.id} </h1>
         
             <div className="images_grid">
-                {showImages.map(image => <img src={image}></img>)}
+                {showImages.map(image => <img key ={image} src={image}></img>)}
             </div>
         </div>
     )
