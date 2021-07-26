@@ -4,11 +4,13 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route("/")
-def homepage():
+@app.route("/<path:path>")
+@app.route("/", defaults={"path": ""})
+def catch_all(path):
     """View Homepage"""
 
     return render_template("root.html")
+
 
 
 
