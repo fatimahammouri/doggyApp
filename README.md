@@ -21,6 +21,10 @@ Allow users to filter the list of breeds with simple substring matching.
 Opens a separate page showing random pictures of dogs from that breed.
 
 
+
+https://user-images.githubusercontent.com/43380670/127151722-7c51d6b6-163f-4c44-a70d-e258492c952d.mov
+
+
 ---
 ## Technologies
 
