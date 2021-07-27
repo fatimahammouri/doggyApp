@@ -12,17 +12,21 @@ DOGGY app is a single page application that was built using React to show random
 Shows a list of all breeds available on the DOG API.
 Allow users to click into each breed to see images.
 
+https://user-images.githubusercontent.com/43380670/127152924-df24e798-75e5-43c8-86de-07f8ba07f29e.mov
+
+
 ### Search
 
 Allow users to filter the list of breeds with simple substring matching.
+
+https://user-images.githubusercontent.com/43380670/127152705-15dd9aa0-fb03-4db0-8d4f-5fea08053d86.mov
+
 
 ### Images 
 
 Opens a separate page showing random pictures of dogs from that breed.
 
-
-
-https://user-images.githubusercontent.com/43380670/127151722-7c51d6b6-163f-4c44-a70d-e258492c952d.mov
+https://user-images.githubusercontent.com/43380670/127152845-e5a88cbe-a77f-4a34-9584-bbb1f6c15df2.mov
 
 
 ---
