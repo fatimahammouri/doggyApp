@@ -2,8 +2,6 @@
 
 DOGGY app is a single page application that was built using React to show random dog pictures to users from the [Dog API](https://dog.ceo/dog-api/).
 
-
-
 ---
 ## Features
 
@@ -33,7 +31,6 @@ https://user-images.githubusercontent.com/43380670/127152845-e5a88cbe-a77f-4a34-
 ## Technologies
 
 * React
-<<<<<<< HEAD
 * React Router
 * HTML
 * CSS
@@ -43,17 +40,9 @@ https://user-images.githubusercontent.com/43380670/127152845-e5a88cbe-a77f-4a34-
 ---
 ## Installation and Usage
 
-Clone or fork this repo:
-
-open the project in your favourite Text editor like [VS Code](https://code.visualstudio.com/)
+Clone or fork this repo and open the project in your favourite Text editor like [VS Code](https://code.visualstudio.com/)
 
 DOGGY is styled using Mainly CSS, CDNs are included in root.html
-=======
-* React Router 
-* HTML
-* CSS
-* Dog API
->>>>>>> 08a0874f23be0af86ec1a41f0be2fbb88dbabf4f
 
 Create and activate a virtual environment inside your directory:
 ```
